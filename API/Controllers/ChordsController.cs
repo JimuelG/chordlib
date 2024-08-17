@@ -35,12 +35,16 @@ public class ChordsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Chord>> CreateChords(Chord chord)
+    public async Task<ActionResult<Lyric>> CreateLyricWithChords(Lyric lyric, List<LyricChord> lyricChords)
     {
-        context.Chords.Add(chord);
+        context.Lyrics.Add(lyric);
 
+        foreach (var lyricChord in lyricChords)
+        {
+            context.LyricChords.Add(lyricChord);
+        }
         await context.SaveChangesAsync();
 
-        return chord;
+        return lyric;
     }
 }

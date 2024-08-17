@@ -4,5 +4,5 @@ public class Lyric : BaseEntity
 {
     public required string Content { get; set; }
 
-    public ICollection<Chord> Chords { get; set; } = [];
+    public ICollection<LyricChord> LyricChords { get; set; } = [];
 }

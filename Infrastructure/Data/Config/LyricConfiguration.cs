@@ -8,7 +8,7 @@ public class LyricsConfiguration : IEntityTypeConfiguration<Lyric>
 {
     public void Configure(EntityTypeBuilder<Lyric> builder)
     {
-        builder.HasMany(c => c.Chords)
+        builder.HasMany(c => c.LyricChords)
             .WithOne(u => u.Lyric)
             .HasForeignKey(c => c.LyricId);
     }

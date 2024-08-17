@@ -12,8 +12,5 @@ public class ChordConfiguration : IEntityTypeConfiguration<Chord>
             .WithMany(u => u.Chords)
             .HasForeignKey(c => c.UserId);
 
-        builder.HasOne(c => c.Lyric)
-            .WithMany(u => u.Chords)
-            .HasForeignKey(c => c.LyricId);
     }
 }

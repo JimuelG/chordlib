@@ -11,6 +11,8 @@ public class ChordContext(DbContextOptions options) : DbContext(options)
     public DbSet<Lyric> Lyrics { get; set; }
     public DbSet<Chord> Chords { get; set; }
 
+    public DbSet<LyricChord> LyricChords { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

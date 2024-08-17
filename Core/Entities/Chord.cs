@@ -10,7 +10,6 @@ public class Chord : BaseEntity
     public required int UserId { get; set; }
     public required User User { get; set; }
 
-    public required int LyricId { get; set; }
-    public required Lyric Lyric { get; set; }
+    public ICollection<LyricChord> LyricChords { get; set; } = [];
     
 }
