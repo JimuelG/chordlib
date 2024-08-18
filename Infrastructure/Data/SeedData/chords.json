@@ -1,0 +1,146 @@
+[
+    {        
+        "Name": "C Major",
+        "Diagram": "C_Major_Diagram",
+        "AudioUrl": "C_Major_Audio.mp3",
+        "Key": "C"
+        },
+    {        
+        "Name": "C Minor",
+        "Diagram": "C_Minor_Diagram",
+        "AudioUrl": "C_Minor_Audio.mp3",
+        "Key": "Cm"
+    },
+    {        
+        "Name": "D Major",
+        "Diagram": "D_Major_Diagram",
+        "AudioUrl": "D_Major_Audio.mp3",
+        "Key": "D"
+    },
+    {        
+        "Name": "D Minor",
+        "Diagram": "D_Minor_Diagram",
+        "AudioUrl": "D_Minor_Audio.mp3",
+        "Key": "Dm"
+    },
+    {        
+        "Name": "E Major",
+        "Diagram": "E_Major_Diagram",
+        "AudioUrl": "E_Major_Audio.mp3",
+        "Key": "E"
+    },
+    {        
+        "Name": "E Minor",
+        "Diagram": "E_Minor_Diagram",
+        "AudioUrl": "E_Minor_Audio.mp3",
+        "Key": "Em"
+    },
+    {        
+        "Name": "F Major",
+        "Diagram": "F_Major_Diagram",
+        "AudioUrl": "F_Major_Audio.mp3",
+        "Key": "F"   
+    },
+    {        
+        "Name": "F Minor",
+        "Diagram": "F_Minor_Diagram",
+        "AudioUrl": "F_Minor_Audio.mp3",
+        "Key": "Fm"
+    },
+    {        
+        "Name": "G Major",
+        "Diagram": "G_Major_Diagram",
+        "AudioUrl": "G_Major_Audio.mp3",
+        "Key": "G"
+    },
+    {
+        "Name": "G Minor",
+        "Diagram": "G_Minor_Diagram",
+        "AudioUrl": "G_Minor_Audio.mp3",
+        "Key": "Gm"
+    },
+    {
+        "Name": "A Major",
+        "Diagram": "A_Major_Diagram",
+        "AudioUrl": "A_Major_Audio.mp3",
+        "Key": "A"
+    },
+    {
+        "Name": "A Minor",
+        "Diagram": "A_Minor_Diagram",
+        "AudioUrl": "A_Minor_Audio.mp3",
+        "Key": "Am"
+    },
+    {
+        "Name": "B Major",
+        "Diagram": "B_Major_Diagram",
+        "AudioUrl": "B_Major_Audio.mp3",
+        "Key": "B"
+    },
+    {
+        "Name": "B Minor",
+        "Diagram": "B_Minor_Diagram",
+        "AudioUrl": "B_Minor_Audio.mp3",
+        "Key": "Bm"
+    },
+    {
+        "Name": "C# Major",
+        "Diagram": "CSharp_Major_Diagram",
+        "AudioUrl": "CSharp_Major_Audio,.mp3",
+        "Key": "C#"
+    },
+    {
+        "Name": "C# Minor",
+        "Diagram": "CSharp_Minor_Diagram",
+        "AudioUrl": "CSharp_Minor_Audio,.mp3",
+        "Key": "C#m"
+    },
+    {
+        "Name": "D# Major",
+        "Diagram": "DSharp_Major_Diagram",
+        "AudioUrl": "DSharp_Major_Audio,.mp3",
+        "Key": "D#"
+    },
+    {
+        "Name": "D# Minor",
+        "Diagram": "DSharp_Minor_Diagram",
+        "AudioUrl": "DSharp_Minor_Audio,.mp3",
+        "Key": "D#m"
+    },
+    {
+        "Name": "F# Major",
+        "Diagram": "FSharp_Major_Diagram",
+        "AudioUrl": "FSharp_Major_Audio,.mp3",
+        "Key": "F#"
+    },
+    {
+        "Name": "F# Minor",
+        "Diagram": "FSharp_Minor_Diagram",
+        "AudioUrl": "FSharp_Minor_Audio,.mp3",
+        "Key": "F#m"
+    },
+    {
+        "Name": "G# Major",
+        "Diagram": "GSharp_Major_Diagram",
+        "AudioUrl": "GSharp_Major_Audio,.mp3",
+        "Key": "G#"
+    },
+    {
+        "Name": "G# Minor",
+        "Diagram": "GSharp_Minor_Diagram",
+        "AudioUrl": "GSharp_Minor_Audio,.mp3",
+        "Key": "G#m"
+    },
+    {
+        "Name": "A# Major",
+        "Diagram": "ASharp_Major_Diagram",
+        "AudioUrl": "ASharp_Major_Audio,.mp3",
+        "Key": "A#"
+    },
+    {
+        "Name": "A# Minor",
+        "Diagram": "ASharp_Minor_Diagram",
+        "AudioUrl": "ASharp_Minor_Audio,.mp3",
+        "Key": "A#m"
+    }
+]

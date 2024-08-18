@@ -1,11 +1,11 @@
 namespace Core.Entities;
 
-public class LyricChord : BaseEntity
+public class LyricChord
 {
-    public required int LyricId { get; set; }
-    public required Lyric Lyric { get; set; }
+    public required int SongId { get; set; }
+    public Song Song { get; set; }
     public required int ChordId { get; set; }
-    public required Chord Chord { get; set; }
+    public Chord Chord { get; set; }
 
-    public required int Position { get; set; }
+    public required int CharacterIndex { get; set; }
 }

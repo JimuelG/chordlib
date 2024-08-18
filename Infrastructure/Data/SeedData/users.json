@@ -1,0 +1,12 @@
+[
+    {
+        "Username": "john.newton",
+        "Password": "$2a$12$D4F28yZZiUtBB7IDaHlI4OLNmp9gx0hzVpzM9Bxd2v2tN5zWqO.3W",
+        "Email": "john.newton@example.com"
+    },
+    {
+        "Username": "traditional.artist",
+        "Password": "$2a$12$K1FlA06hA4O3cKj9efMxqOgIA/lkNqZ9j4bVVZX.dzFCuBt/I5meq",
+        "Email": "traditional.artist@example.com"
+    }
+]

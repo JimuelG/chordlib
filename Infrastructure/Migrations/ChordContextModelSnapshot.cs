@@ -30,32 +30,18 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AudioUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Diagram")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Key")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("LyricId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("LyricId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Chords");
                 });
@@ -69,12 +55,58 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Content")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Lyrics");
+                });
+
+            modelBuilder.Entity("Core.Entities.LyricChord", b =>
+                {
+                    b.Property<int>("SongId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ChordId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CharacterIndex")
+                        .HasColumnType("int");
+
+                    b.HasKey("SongId", "ChordId", "CharacterIndex");
+
+                    b.HasIndex("ChordId");
+
+                    b.ToTable("LyricChords");
+                });
+
+            modelBuilder.Entity("Core.Entities.Song", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Artist")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LyricId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LyricId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Songs");
                 });
 
             modelBuilder.Entity("Core.Entities.User", b =>
@@ -86,15 +118,12 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -102,16 +131,35 @@ namespace Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Core.Entities.Chord", b =>
+            modelBuilder.Entity("Core.Entities.LyricChord", b =>
+                {
+                    b.HasOne("Core.Entities.Chord", "Chord")
+                        .WithMany("LyricChords")
+                        .HasForeignKey("ChordId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.Song", "Song")
+                        .WithMany("LyricChords")
+                        .HasForeignKey("SongId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Chord");
+
+                    b.Navigation("Song");
+                });
+
+            modelBuilder.Entity("Core.Entities.Song", b =>
                 {
                     b.HasOne("Core.Entities.Lyric", "Lyric")
-                        .WithMany("Chords")
+                        .WithMany("Songs")
                         .HasForeignKey("LyricId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Entities.User", "User")
-                        .WithMany("Chords")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -121,14 +169,19 @@ namespace Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Core.Entities.Lyric", b =>
+            modelBuilder.Entity("Core.Entities.Chord", b =>
                 {
-                    b.Navigation("Chords");
+                    b.Navigation("LyricChords");
                 });
 
-            modelBuilder.Entity("Core.Entities.User", b =>
+            modelBuilder.Entity("Core.Entities.Lyric", b =>
                 {
-                    b.Navigation("Chords");
+                    b.Navigation("Songs");
+                });
+
+            modelBuilder.Entity("Core.Entities.Song", b =>
+                {
+                    b.Navigation("LyricChords");
                 });
 #pragma warning restore 612, 618
         }

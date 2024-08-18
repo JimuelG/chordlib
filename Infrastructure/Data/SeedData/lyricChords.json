@@ -1,0 +1,22 @@
+[
+    {
+        "SongId": 1,
+        "ChordId": 1,
+        "CharacterIndex": 0
+    },
+    {
+        "SongId": 1,
+        "ChordId": 2,
+        "CharacterIndex": 8
+    },
+    {
+        "SongId": 2,
+        "ChordId": 3,
+        "CharacterIndex": 0 
+    },
+    {
+        "SongId": 2,
+        "ChordId": 4, 
+        "CharacterIndex": 9
+    }
+]

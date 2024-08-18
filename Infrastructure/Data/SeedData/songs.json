@@ -1,0 +1,14 @@
+[
+    {
+        "Title": "Amazing Grace",
+        "Artist": "John Newton",
+        "LyricId": 1,
+        "UserId": 1
+    },
+    {
+        "Title": "Twinkle Twinkle Little Star",
+        "Artist": "Traditional",
+        "LyricId": 2,
+        "UserId": 2
+    }
+]
