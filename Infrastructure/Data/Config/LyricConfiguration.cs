@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Config;
 
-public class LyricsConfiguration : IEntityTypeConfiguration<Lyric>
+public class LyricConfiguration : IEntityTypeConfiguration<Lyric>
 {
     public void Configure(EntityTypeBuilder<Lyric> builder)
     {

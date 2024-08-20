@@ -12,6 +12,7 @@ builder.Services.AddDbContext<ChordContext>( opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<IChordRepository, ChordRepository>();
+builder.Services.AddScoped<ISongRepository, SongRepository>();
 
 var app = builder.Build();
 

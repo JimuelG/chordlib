@@ -17,7 +17,7 @@ public class ChordRepository(ChordContext context) : IChordRepository
         context.Chords.Remove(chord);
     }
 
-    public async Task<Chord?> GetChordByIdAsync(int id)
+    public async Task<Chord> GetChordByIdAsync(int id)
     {
         return await context.Chords.FindAsync(id);
     }

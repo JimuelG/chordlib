@@ -17,8 +17,8 @@ public class ChordContext(DbContextOptions options) : DbContext(options)
     {
         base.OnModelCreating(modelBuilder);
         // modelBuilder.ApplyConfigurationsFromAssembly(typeof(ChordConfiguration).Assembly);
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(LyricsConfiguration).Assembly);
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(LyricsConfiguration).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(LyricConfiguration).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(LyricChordConfiguration).Assembly);
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(SongConfiguration).Assembly);
     }
 }

@@ -1,22 +1,22 @@
 [
     {
-        "SongId": 1,
-        "ChordId": 1,
+        "SongId": 5,
+        "ChordId": 57,
         "CharacterIndex": 0
     },
     {
-        "SongId": 1,
-        "ChordId": 2,
+        "SongId": 5,
+        "ChordId": 49,
         "CharacterIndex": 8
     },
     {
-        "SongId": 2,
-        "ChordId": 3,
+        "SongId": 6,
+        "ChordId": 49,
         "CharacterIndex": 0 
     },
     {
-        "SongId": 2,
-        "ChordId": 4, 
+        "SongId": 6,
+        "ChordId": 55, 
         "CharacterIndex": 9
     }
 ]
