@@ -1,6 +1,5 @@
 using Core.Entities;
 using Core.Interfaces;
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -19,6 +18,18 @@ public class SongsController(ISongRepository repo) : ControllerBase
     public async Task<Song> GetSong(int id)
     {
         return await repo.GetSongByIdAsync(id);
+    }
+
+    [HttpGet("lyricchords")]
+    public async Task<IReadOnlyList<LyricChord>> GetLyricChords()
+    {
+        return await repo.GetLyricChordsAsync();
+    }
+
+    [HttpGet("lyrics")]
+    public async Task<IReadOnlyList<Lyric>> GetLyrics()
+    {
+        return await repo.GetLyricsAsync();
     }
 
     // [HttpPost]

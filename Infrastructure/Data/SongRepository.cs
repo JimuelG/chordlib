@@ -16,6 +16,11 @@ public class SongRepository(ChordContext context) : ISongRepository
         context.Songs.Remove(song);
     }
 
+    public async Task<IReadOnlyList<LyricChord>> GetLyricChordsAsync()
+    {
+        return await context.LyricChords.ToListAsync();
+    }
+
     public async Task<Song> GetSongByIdAsync(int id)
     {
         return await context.Songs.FindAsync(id);
@@ -24,6 +29,11 @@ public class SongRepository(ChordContext context) : ISongRepository
     public async Task<IReadOnlyList<Song>> GetSongsAync()
     {
         return await context.Songs.ToListAsync();
+    }
+
+    public async Task<IReadOnlyList<Lyric>> GetLyricsAsync()
+    {
+        return await context.Lyrics.ToListAsync();
     }
 
     public async Task<bool> SaveChangesAsync()
